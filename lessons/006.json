@@ -1,0 +1,47 @@
+{
+  "id":"006",
+  "title":"Liquidity sweep và false breakout",
+  "subtitle":"Học phân biệt giá chỉ quét qua level với breakout thật sự được thị trường chấp nhận.",
+  "summary":"Liquidity thường tập trung quanh swing High/Low, equal highs/lows và các level mà nhiều trader đặt stop. Một wick xuyên level rồi đóng trở lại có thể là sweep/failed breakout, nhưng phải đọc thêm follow-through để biết cú quét có thực sự tạo reversal hay chỉ là bước chuẩn bị cho breakout thật.",
+  "candlesFrom":"001",
+  "symbol":"BTCUSDT",
+  "interval":"4h",
+  "sourceNote":"BTCUSDT 4H thật từ Binance Spot. Bài này dùng cả vùng prior High 79.5k và cụm Low quanh 78.1k để luyện đọc sweep trên candle thật.",
+  "framework":[
+    "Xác định nơi stop/liquidity có khả năng tập trung: prior High/Low hoặc clustered highs/lows.",
+    "Quan sát candle có xuyên level rồi đóng trở lại phía cũ không.",
+    "Kiểm tra follow-through: reversal tiếp tục hay thị trường nhanh chóng quay lại breakout theo hướng cũ?",
+    "Không vào lệnh chỉ vì thấy wick; sweep cần context + confirmation."
+  ],
+  "principle":{
+    "title":"Sweep là sự kiện; trade cần confirmation",
+    "paragraphs":[
+      "Candle A xuyên prior High 79.5k lên 80k rồi đóng dưới level. Nhìn riêng candle này, nó có đặc điểm của failed breakout/sweep phía trên High.",
+      "Nhưng vài candle sau giá lại đóng rõ trên 79.5k và tạo 81.27k. Điều này cho thấy sweep ban đầu không tạo bearish reversal bền vững; follow-through đã thay đổi cách diễn giải.",
+      "Ở phía dưới, chart cũng có clustered lows quanh 78.1k. Candle C xuyên xuống 77.85k rồi đóng trở lại 78.63k — một ví dụ reclaim đáng chú ý, nhưng vẫn không phải lệnh long tự động."
+    ],
+    "callout":"Một sweep đẹp trên hindsight có thể rất mơ hồ tại thời điểm live. Hãy luôn hỏi: after the sweep, price did what next?"
+  },
+  "examples":[
+    {"id":"A","time":1787576400,"position":"aboveBar","shape":"arrowDown","color":"#f3c969","title":"Sweep candidate trên prior High","prompt":"A xuyên 79.5k lên 80k rồi close dưới. Đọc thế nào?","answer":"Đây là dấu hiệu failed breakout/sweep candidate phía trên prior High: giá lấy thanh khoản trên High nhưng chưa được chấp nhận phía trên level."},
+    {"id":"B","time":1787619600,"position":"aboveBar","shape":"arrowDown","color":"#5dd6c0","title":"Follow-through phủ nhận bearish thesis","prompt":"B thay đổi cách đọc A ra sao?","answer":"B đóng rõ trên 79.5k và tạo High 81.27k. Vì vậy không thể chỉ nhìn sweep A rồi kết luận short; subsequent acceptance cho thấy buyers lấy lại quyền kiểm soát."},
+    {"id":"C","time":1787691600,"position":"belowBar","shape":"arrowUp","color":"#7aa7ff","title":"Sweep/reclaim clustered lows","prompt":"C xuống 77.85k dưới cụm Low ~78.1k rồi đóng 78.63k. Điều đáng chú ý là gì?","answer":"Lower prices bị từ chối trong candle và clustered lows bị xuyên qua trước khi reclaim. Đây là liquidity-sweep candidate phía dưới; cần structure/follow-through để xác nhận trade thesis."}
+  ],
+  "priceLines":[
+    {"price":79500,"title":"Prior High liquidity","color":"#f3c969","lineStyle":2,"answerOnly":false},
+    {"price":78140,"title":"Clustered lows ~78.1k","color":"#7aa7ff","lineStyle":2,"answerOnly":false}
+  ],
+  "quiz":[
+    {"question":"Wick xuyên prior High rồi đóng dưới level có thể là gì?","options":["Sweep/failed breakout candidate","BOS chắc chắn","Không có thông tin gì"],"answer":0},
+    {"question":"Sau sweep, điều gì quan trọng nhất để đánh giá thesis?","options":["Tên mẫu nến","Follow-through và market structure","Màu chart"],"answer":1},
+    {"question":"Nếu sau một upper sweep, giá nhanh chóng đóng lại trên level và tạo High mới thì bearish sweep thesis thế nào?","options":["Mạnh hơn","Bị suy yếu/phủ nhận đáng kể","Không thay đổi"],"answer":1}
+  ],
+  "concepts":[
+    {"number":"01","title":"Liquidity pool","text":"Stops và breakout orders thường tập trung quanh obvious highs/lows, khiến các level đó trở thành vùng thanh khoản đáng chú ý."},
+    {"number":"02","title":"Sweep","text":"Giá xuyên level, kích hoạt thanh khoản rồi quay trở lại phía cũ. Candle close/reclaim thường là dữ liệu quan trọng."},
+    {"number":"03","title":"False breakout","text":"Breakout thất bại khi thị trường không duy trì được phía ngoài level và bị kéo trở lại. Nhưng failure cần được đánh giá qua follow-through."},
+    {"number":"04","title":"Confirmation","text":"Sau sweep, structure break, displacement hoặc reclaim mạnh có thể tăng chất lượng setup. Wick đơn lẻ không đủ."
+    }
+  ],
+  "chartHelp":"Nhìn A rồi B theo thứ tự thời gian: cùng một wick có thể được hiểu khác hoàn toàn sau khi có follow-through. Sau đó tìm sweep candidate C ở cụm lows ~78.1k."
+}
