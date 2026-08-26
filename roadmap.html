@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Price Action learning roadmap theo phase, prerequisite và checkpoint thực hành." />
+  <title>Price Action Roadmap</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./roadmap.css" />
+</head>
+<body>
+  <header class="topbar roadmap-topbar">
+    <div>
+      <div class="eyebrow">PRICE ACTION TRAINER</div>
+      <h1>Learning Roadmap</h1>
+      <p class="subtitle">Học theo dependency, checkpoint và practice — không học theo danh sách thuật ngữ.</p>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn" href="./index.html">← Vào bài học</a>
+      <button id="resetProgress" class="btn" type="button">Reset progress</button>
+    </div>
+  </header>
+
+  <main class="roadmap-shell">
+    <section class="roadmap-hero card">
+      <div>
+        <span class="badge">PLAN</span>
+        <h2 id="roadmapTitle">Price Action Roadmap</h2>
+        <p id="roadmapSubtitle" class="roadmap-lead"></p>
+      </div>
+      <div class="progress-card">
+        <div class="progress-head"><strong id="progressLabel">0% hoàn thành</strong><span id="progressCount">0/0 core nodes</span></div>
+        <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+        <p>Progress lưu cục bộ trên trình duyệt này.</p>
+      </div>
+    </section>
+
+    <section class="roadmap-controls card">
+      <div class="roadmap-legend">
+        <span class="legend-pill required">Core · Required</span>
+        <span class="legend-pill recommended">Recommended</span>
+        <span class="legend-pill optional">Optional · Pick later</span>
+      </div>
+      <div class="filter-row">
+        <button class="filter-chip active" data-filter="all">Tất cả</button>
+        <button class="filter-chip" data-filter="required">Core</button>
+        <button class="filter-chip" data-filter="recommended">Recommended</button>
+        <button class="filter-chip" data-filter="optional">Optional</button>
+      </div>
+    </section>
+
+    <section id="principles" class="principles-grid"></section>
+
+    <section id="roadmap" class="roadmap-flow" aria-label="Price Action roadmap"></section>
+  </main>
+
+  <footer>
+    <span>Price Action Trainer · Learning Roadmap</span>
+    <span>Inspired by dependency-first learning paths, adapted for trading practice.</span>
+  </footer>
+
+  <script src="./roadmap.js" defer></script>
+</body>
+</html>
