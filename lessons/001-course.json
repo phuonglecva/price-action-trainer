@@ -1,0 +1,42 @@
+{
+  "id":"001",
+  "title":"Body, wick và vị trí đóng cửa",
+  "subtitle":"Đọc một candle bằng evidence trước khi học tên pattern.",
+  "summary":"Trước khi gọi một cây nến là pin bar hay engulfing, hãy đọc range, body, upper/lower wick và vị trí close. Đây là ngôn ngữ cơ bản để hiểu buyers/sellers đã làm gì trong chính candle đó.",
+  "candlesFrom":"001",
+  "symbol":"BTCUSDT",
+  "interval":"4h",
+  "sourceNote":"Snapshot cố định BTCUSDT 4H lấy từ Binance Spot.",
+  "framework":[
+    "Range: nến lớn hay nhỏ so với xung quanh?",
+    "Body: Open → Close cho thấy bên nào giữ được nhiều quãng đường?",
+    "Wick: vùng giá nào đã được giao dịch nhưng không được giữ tới close?",
+    "Close: đóng gần High, Low hay giữa range?"
+  ],
+  "principle":{
+    "title":"Wick là rejection, không phải tín hiệu Buy/Sell",
+    "paragraphs":[
+      "Upper wick nghĩa là giá từng giao dịch cao hơn body nhưng không giữ được vùng cao đó tới lúc đóng candle. Lower wick là logic ngược lại.",
+      "Một wick dài chỉ trở nên có ý nghĩa giao dịch khi đặt đúng context: level, structure và phản ứng sau đó."
+    ],
+    "callout":"Context > candlestick pattern. Cùng một wick ở giữa range và tại previous High/Low là hai câu chuyện khác nhau."
+  },
+  "examples":[
+    {"id":"A","time":1787288400,"position":"aboveBar","shape":"arrowDown","color":"#5dd6c0","title":"Expansion bullish","prompt":"Đọc candle A bằng body + wick + close.","answer":"Body chiếm phần lớn range và close rất gần High; buyers giữ được phần lớn thành quả trong candle."},
+    {"id":"B","time":1787547600,"position":"aboveBar","shape":"arrowDown","color":"#f3c969","title":"Upper-wick rejection","prompt":"Upper wick của B đang nói điều gì?","answer":"Giá từng lên 77,790 nhưng đóng 77,041. Vùng giá cao hơn bị từ chối; đây chưa phải lệnh short tự động."},
+    {"id":"C","time":1787749200,"position":"belowBar","shape":"arrowUp","color":"#7aa7ff","title":"Lower-wick rejection","prompt":"Lower wick của C đang nói điều gì?","answer":"Giá xuống 77,913 rồi được kéo lên đóng 78,590, gần High của candle: lower prices bị từ chối trong phiên."}
+  ],
+  "quiz":[
+    {"question":"Upper wick dài chứng minh chắc chắn giá sẽ giảm?","options":["Đúng","Sai — cần context và close location"],"answer":1},
+    {"question":"Bullish candle có body lớn và close sát High thường cho biết gì?","options":["Sellers kiểm soát cuối phiên","Buyers giữ phần lớn lợi thế trong candle","Không có thông tin"],"answer":1},
+    {"question":"Lower wick dài có ý nghĩa hơn khi nào?","options":["Tại level/structure quan trọng và có phản ứng xác nhận","Bất cứ nơi nào trên chart"],"answer":0}
+  ],
+  "concepts":[
+    {"number":"01","title":"Range","text":"High − Low cho biết toàn bộ quãng giá candle đã giao dịch. Hãy luôn so range với các candle lân cận."},
+    {"number":"02","title":"Body","text":"Khoảng Open ↔ Close cho biết kết quả ròng trong candle; body lớn tương đối thường thể hiện kiểm soát rõ hơn."},
+    {"number":"03","title":"Wick","text":"Wick là phần giá đã được thăm dò nhưng không được giữ tới close. Nó cho bằng chứng rejection, không cho lệnh tự động."},
+    {"number":"04","title":"Close location","text":"Close gần High nghiêng về buyers; gần Low nghiêng về sellers; giữa range cho kết quả cân bằng hơn."
+    }
+  ],
+  "chartHelp":"Rê chuột qua từng candle để xem OHLC, Body %, Upper/Lower Wick % và Close location."
+}
