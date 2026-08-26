@@ -1,0 +1,46 @@
+{
+  "id":"005",
+  "title":"BOS, CHoCH và protected level",
+  "subtitle":"Phân biệt wick xuyên level với breakout được chấp nhận; học khi nào cấu trúc thật sự thay đổi.",
+  "summary":"Break of Structure (BOS) thường là cú phá swing theo hướng cấu trúc hiện tại. CHoCH/structure shift là dấu hiệu đầu tiên cấu trúc cũ bị thách thức khi protected swing bị phá. Quan trọng: bạn phải thống nhất tiêu chí xác nhận bằng wick hay candle close.",
+  "candlesFrom":"001",
+  "symbol":"BTCUSDT",
+  "interval":"4h",
+  "sourceNote":"BTCUSDT 4H thật từ Binance Spot. Đoạn này có một ví dụ rất thực tế: wick vượt 79.5k trước, nhưng candle chưa đóng trên level; vài candle sau mới có close acceptance.",
+  "framework":[
+    "Xác định prior swing High/Low trước khi nói BOS.",
+    "Chọn rule nhất quán: wick break hay close break; trong khóa này ưu tiên close acceptance cho major structure.",
+    "BOS theo hướng trend thường xác nhận continuation.",
+    "CHoCH không đồng nghĩa đảo chiều chắc chắn; nó là cảnh báo structure cũ đang mất kiểm soát."
+  ],
+  "principle":{
+    "title":"Wick break khác accepted breakout",
+    "paragraphs":[
+      "Candle tại A có High 80,000, vượt prior High 79,500, nhưng Close chỉ khoảng 79,048 — quay trở lại dưới level. Nếu rule của ta cần close, đây chưa phải BOS được xác nhận.",
+      "Candle tại B sau đó đóng khoảng 80,364, rõ ràng trên 79,500. Lúc này ta có acceptance phía trên prior High và bullish BOS đáng tin hơn."
+    ],
+    "callout":"Đừng đổi rule sau khi nhìn kết quả. Nếu bạn dùng candle close để confirm structure break, hãy dùng cùng rule cho cả backtest và live trading."
+  },
+  "examples":[
+    {"id":"A","time":1787576400,"position":"aboveBar","shape":"circle","color":"#f3c969","title":"Wick vượt 79.5k nhưng close dưới","prompt":"High chạm 80k. Đây đã là BOS theo close-based rule chưa?","answer":"Chưa. Candle xuyên prior High bằng wick nhưng đóng ~79.05k, dưới 79.5k. Đây là test/rejection phía trên level, chưa có close acceptance."},
+    {"id":"B","time":1787619600,"position":"aboveBar","shape":"arrowDown","color":"#5dd6c0","title":"Bullish BOS được xác nhận","prompt":"Điều gì khác ở B?","answer":"B đóng ~80.36k, trên prior High 79.5k. Theo close-based rule, đây là bullish BOS/acceptance và High của candle đạt ~81.27k."},
+    {"id":"C","time":1787461200,"position":"belowBar","shape":"arrowUp","color":"#7aa7ff","title":"Protected low ~75.55k","prompt":"Level nào phải mất để major bullish structure bị nghi ngờ mạnh?","answer":"Protected low quanh 75.55k là swing quan trọng đã tạo nền cho HH mới. Một close rõ dưới vùng này sẽ là dấu hiệu structure shift/CHoCH đáng chú ý ở cấp major đang xét."}
+  ],
+  "priceLines":[
+    {"price":79500,"title":"Prior High · BOS level","color":"#f3c969","lineStyle":2,"answerOnly":false},
+    {"price":75545.67,"title":"Protected Low · CHoCH watch","color":"#5dd6c0","lineStyle":2,"answerOnly":true}
+  ],
+  "quiz":[
+    {"question":"Theo close-based rule, candle High 80k nhưng Close 79.05k dưới prior High 79.5k đã confirm BOS chưa?","options":["Rồi","Chưa"],"answer":1},
+    {"question":"BOS bullish có ý nghĩa mạnh nhất khi nào?","options":["Khi phá một swing High có ý nghĩa theo hướng bullish structure","Khi bất kỳ wick nào cao hơn candle trước","Khi RSI > 70"],"answer":0},
+    {"question":"CHoCH có nghĩa chắc chắn trend đảo chiều không?","options":["Có","Không; đó là tín hiệu cấu trúc cũ bị thách thức, cần follow-through/context"],"answer":1}
+  ],
+  "concepts":[
+    {"number":"01","title":"BOS","text":"Break of Structure theo hướng cấu trúc hiện tại thường củng cố continuation thesis khi phá swing có ý nghĩa."},
+    {"number":"02","title":"CHoCH","text":"Change of Character/structure shift là break ngược lại cấu trúc đang kiểm soát. Nó là cảnh báo, không phải lệnh đảo chiều tự động."},
+    {"number":"03","title":"Acceptance","text":"Giá đi qua level chưa đủ. Close và follow-through giúp đánh giá thị trường có chấp nhận vùng giá mới hay chỉ quét qua rồi quay lại."},
+    {"number":"04","title":"Rule consistency","text":"Wick-based và close-based đều có thể dùng, nhưng kết quả backtest vô nghĩa nếu trader thay đổi tiêu chí tùy tình huống."
+    }
+  ],
+  "chartHelp":"So candle A (wick >79.5k, close dưới) với B (close >79.5k). Đây là khác biệt giữa test level và accepted BOS theo rule của khóa học."
+}
