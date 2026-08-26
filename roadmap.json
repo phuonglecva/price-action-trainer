@@ -1,0 +1,157 @@
+{
+  "title": "Price Action Roadmap",
+  "subtitle": "Từ đọc một candle đến xây dựng và kiểm chứng một trading playbook",
+  "principles": [
+    "Candlestick trước indicator: luôn đọc OHLC, body, wick, close và context.",
+    "Evidence trước prediction: mô tả điều thị trường đã làm trước khi đoán điều tiếp theo.",
+    "Structure trước entry: không tìm điểm vào nếu chưa xác định regime, location và invalidation.",
+    "Một concept phải vượt checkpoint thực hành trước khi xem là đã học.",
+    "Risk management là core skill, không phải phần phụ sau Price Action."
+  ],
+  "legend": {
+    "required": "Core · cần học theo thứ tự",
+    "recommended": "Recommended · nên học",
+    "optional": "Optional · học sau khi core vững"
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "title": "Orientation · Chart mechanics",
+      "level": "Beginner",
+      "goal": "Hiểu candlestick thực sự được tạo như thế nào trước khi diễn giải Price Action.",
+      "gate": "Nhìn một candle bất kỳ và đọc đúng O/H/L/C, range, body, wick; giải thích timeframe aggregation.",
+      "nodes": [
+        {"id":"000","title":"OHLC & anatomy of a candle","priority":"required","status":"covered","lesson":"001"},
+        {"id":"000A","title":"Timeframe & candle aggregation","priority":"required","status":"planned"},
+        {"id":"000B","title":"Price scale, gaps, tick size","priority":"recommended","status":"planned"},
+        {"id":"000C","title":"Spot vs perpetual chart differences","priority":"recommended","status":"planned"}
+      ]
+    },
+    {
+      "id": "P1",
+      "title": "Candle Literacy",
+      "level": "Beginner",
+      "goal": "Đọc pressure và acceptance/rejection từ candle mà không phụ thuộc tên pattern.",
+      "gate": "Blind test 20 candle: mô tả strength/weakness bằng range, body, wick, close; không dùng từ BUY/SELL.",
+      "nodes": [
+        {"id":"001","title":"Body, wick & close location","priority":"required","status":"available","lesson":"001"},
+        {"id":"002","title":"Candle strength: expansion vs contraction","priority":"required","status":"available","lesson":"002"},
+        {"id":"007","title":"Candle sequence & follow-through","priority":"required","status":"planned"},
+        {"id":"008","title":"Rejection vs acceptance","priority":"required","status":"planned"},
+        {"id":"008A","title":"Named patterns: pin bar / engulfing as shorthand only","priority":"optional","status":"planned"}
+      ]
+    },
+    {
+      "id": "P2",
+      "title": "Price Movement & Market Structure",
+      "level": "Beginner → Intermediate",
+      "goal": "Chuyển từ đọc từng candle sang đọc leg, swing và cấu trúc.",
+      "gate": "Trên 10 chart không annotate: đánh dấu impulse/pullback, major swings, protected level và giải thích khi nào structure thực sự đổi.",
+      "nodes": [
+        {"id":"003","title":"Impulse & pullback","priority":"required","status":"available","lesson":"003"},
+        {"id":"004","title":"HH, HL, LH, LL","priority":"required","status":"available","lesson":"004"},
+        {"id":"005","title":"BOS, CHoCH & protected level","priority":"required","status":"available","lesson":"005"},
+        {"id":"006","title":"Liquidity sweep & false breakout","priority":"required","status":"available","lesson":"006"},
+        {"id":"009","title":"Internal vs external structure","priority":"required","status":"planned"},
+        {"id":"010","title":"Range structure: high, low, midpoint","priority":"required","status":"planned"}
+      ]
+    },
+    {
+      "id": "P3",
+      "title": "Location · Levels & Zones",
+      "level": "Intermediate",
+      "goal": "Biết một tín hiệu xảy ra ở đâu và tại sao location thường quan trọng hơn pattern.",
+      "gate": "Tự vẽ level trên 15 chart rồi giải thích level nào quan trọng, level nào chỉ là noise và level nào đã mất hiệu lực.",
+      "nodes": [
+        {"id":"011","title":"Support / resistance as zones","priority":"required","status":"planned"},
+        {"id":"012","title":"Previous day/week high & low","priority":"recommended","status":"planned"},
+        {"id":"013","title":"Range high / low / equilibrium","priority":"required","status":"planned"},
+        {"id":"014","title":"Breakout: acceptance, retest, failure","priority":"required","status":"planned"},
+        {"id":"015","title":"Supply & demand zones","priority":"optional","status":"planned"},
+        {"id":"016","title":"Trendlines & channels","priority":"optional","status":"planned"}
+      ]
+    },
+    {
+      "id": "P4",
+      "title": "Market Regimes",
+      "level": "Intermediate",
+      "goal": "Phân biệt trend, range, transition và volatility regime để tránh dùng một setup cho mọi thị trường.",
+      "gate": "Phân loại 30 chart thành trend/range/transition và chỉ ra evidence; tối thiểu 80% nhất quán khi xem lại.",
+      "nodes": [
+        {"id":"017","title":"Trend quality & healthy pullbacks","priority":"required","status":"planned"},
+        {"id":"018","title":"Range behavior & failed edges","priority":"required","status":"planned"},
+        {"id":"019","title":"Compression → expansion","priority":"required","status":"planned"},
+        {"id":"020","title":"Volatility regime & candle range","priority":"recommended","status":"planned"},
+        {"id":"021","title":"Transition, trap & failed continuation","priority":"required","status":"planned"}
+      ]
+    },
+    {
+      "id": "P5",
+      "title": "Multi-Timeframe Context",
+      "level": "Intermediate",
+      "goal": "Đặt lower-timeframe signal vào higher-timeframe structure thay vì cộng confluence tùy ý.",
+      "gate": "Với 10 case: viết HTF bias, location, LTF trigger và invalidation trước khi xem phần chart bên phải.",
+      "nodes": [
+        {"id":"022","title":"Top-down analysis: W/D/4H/1H","priority":"required","status":"planned"},
+        {"id":"023","title":"HTF location → LTF trigger","priority":"required","status":"planned"},
+        {"id":"024","title":"Session / intraday liquidity timing","priority":"optional","status":"planned"},
+        {"id":"025","title":"Confluence without double-counting evidence","priority":"recommended","status":"planned"}
+      ]
+    },
+    {
+      "id": "P6",
+      "title": "Trade Construction",
+      "level": "Intermediate",
+      "goal": "Biến một chart read thành trade hypothesis có trigger, invalidation và target rõ ràng.",
+      "gate": "Viết 20 trade plans mà không được dùng câu 'cảm giác sẽ tăng/giảm'; mọi plan phải có thesis, trigger, invalidation, target và no-trade condition.",
+      "nodes": [
+        {"id":"026","title":"Trade thesis & invalidation","priority":"required","status":"planned"},
+        {"id":"027","title":"Entry triggers: confirmation vs anticipation","priority":"required","status":"planned"},
+        {"id":"028","title":"Stop placement by structure","priority":"required","status":"planned"},
+        {"id":"029","title":"Targets: opposing structure & liquidity","priority":"required","status":"planned"},
+        {"id":"030","title":"R:R, trade location & no-trade decisions","priority":"required","status":"planned"}
+      ]
+    },
+    {
+      "id": "P7",
+      "title": "Risk, Execution & Statistics",
+      "level": "Intermediate → Advanced",
+      "goal": "Đảm bảo một phương pháp đọc chart có thể tồn tại qua chuỗi thua, phí, slippage và uncertainty.",
+      "gate": "Có spreadsheet/journal tối thiểu 50 trades với expectancy, average R, losing streak và rule violations.",
+      "nodes": [
+        {"id":"031","title":"Position sizing & fixed-R risk","priority":"required","status":"planned"},
+        {"id":"032","title":"Leverage, liquidation, fees & slippage","priority":"required","status":"planned"},
+        {"id":"033","title":"Win rate, expectancy & R-multiples","priority":"required","status":"planned"},
+        {"id":"034","title":"Trading journal & screenshot review","priority":"required","status":"planned"},
+        {"id":"035","title":"Backtest / replay without look-ahead bias","priority":"required","status":"planned"}
+      ]
+    },
+    {
+      "id": "P8",
+      "title": "Advanced Price Action",
+      "level": "Advanced · Pick later",
+      "goal": "Mở rộng vocabulary sau khi core structure/risk đã vững; không dùng thuật ngữ advanced để thay thế evidence.",
+      "gate": "Chỉ học phase này sau khi hoàn thành P0–P7 và có ít nhất 50 case journaled.",
+      "nodes": [
+        {"id":"036","title":"Liquidity maps & stop clusters","priority":"recommended","status":"planned"},
+        {"id":"037","title":"Imbalance / Fair Value Gap","priority":"optional","status":"planned"},
+        {"id":"038","title":"Volume + price confirmation","priority":"recommended","status":"planned"},
+        {"id":"039","title":"Swing failure pattern / failed auction","priority":"recommended","status":"planned"},
+        {"id":"040","title":"Narrative building without prediction bias","priority":"required","status":"planned"}
+      ]
+    },
+    {
+      "id": "P9",
+      "title": "Capstone · Build Your Playbook",
+      "level": "Advanced",
+      "goal": "Thu hẹp Price Action thành 1–2 setups có rule và thống kê riêng thay vì trade mọi thứ đã học.",
+      "gate": "Một playbook version 1.0 với setup definition, market regime, trigger, invalidation, target, risk rule và 100 historical examples.",
+      "nodes": [
+        {"id":"C1","title":"Blind chart replay challenge","priority":"required","status":"planned"},
+        {"id":"C2","title":"100-example setup study","priority":"required","status":"planned"},
+        {"id":"C3","title":"Forward observation / paper trading","priority":"required","status":"planned"},
+        {"id":"C4","title":"Playbook v1.0 & review checklist","priority":"required","status":"planned"}
+      ]
+    }
+  ]
+}
