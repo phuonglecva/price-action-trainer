@@ -1,0 +1,46 @@
+{
+  "id":"004",
+  "title":"Market structure: HH, HL, LH, LL",
+  "subtitle":"Từ leg sang cấu trúc: xác định swing nào thực sự có ý nghĩa và bên nào đang kiểm soát thị trường.",
+  "summary":"Market structure giúp ta ngừng phản ứng với từng candle riêng lẻ. Trong bullish structure, giá thường tạo Higher High (HH) và Higher Low (HL). Trong bearish structure, giá thường tạo Lower High (LH) và Lower Low (LL).",
+  "candlesFrom":"001",
+  "symbol":"BTCUSDT",
+  "interval":"4h",
+  "sourceNote":"BTCUSDT 4H thật từ Binance Spot. Bài này chỉ đánh dấu major swings; các dao động nhỏ bên trong được xem là internal noise.",
+  "framework":[
+    "Ưu tiên major swing tạo ra leg rõ, đừng đánh dấu mọi zigzag nhỏ.",
+    "Một High mới chỉ là HH nếu nó cao hơn swing High trước có ý nghĩa.",
+    "Một pullback Low là HL nếu vẫn cao hơn Low/swing bảo vệ trước đó.",
+    "Luôn hỏi: swing nào đang bảo vệ thesis hiện tại?"
+  ],
+  "principle":{
+    "title":"Major structure khác internal structure",
+    "paragraphs":[
+      "Trên cùng một chart, timeframe hoặc mức zoom khác nhau có thể cho các cấu trúc nhỏ khác nhau. Vì vậy việc chọn swing phải nhất quán với mục tiêu phân tích.",
+      "Trong đoạn BTC này, High 79.5k → Low 75.55k → High 81.27k tạo một cấu trúc major khá rõ: High mới cao hơn High trước, trong khi pullback Low vẫn giữ phía trên đáy khởi đầu của leg lớn."
+    ],
+    "callout":"Nếu bạn đánh dấu mọi nhịp 200–300 USD thành HH/HL, chart sẽ đầy tín hiệu giả. Structure chỉ hữu ích khi swing được chọn có ý nghĩa đối với leg bạn đang phân tích."
+  },
+  "examples":[
+    {"id":"A","time":1787288400,"position":"aboveBar","shape":"arrowDown","color":"#7aa7ff","title":"Swing High 79.5k","prompt":"A là High tham chiếu đầu tiên của cấu trúc major.","answer":"A = major swing High ~79.5k. Nó trở thành level mà bullish continuation cần vượt để tạo Higher High rõ ràng."},
+    {"id":"B","time":1787461200,"position":"belowBar","shape":"arrowUp","color":"#5dd6c0","title":"Higher Low / protected candidate","prompt":"B nằm ở đâu so với leg tăng lớn trước đó?","answer":"B = pullback Low ~75.55k. Sau khi giá từ đây tạo High mới, B trở thành HL quan trọng/protected low của bullish structure đang xét."},
+    {"id":"C","time":1787619600,"position":"aboveBar","shape":"arrowDown","color":"#5dd6c0","title":"Higher High 81.27k","prompt":"C so với A là gì?","answer":"C = HH vì High 81.27k cao hơn A 79.5k. Khi kết hợp với HL tại B, major structure hiện tại nghiêng bullish."}
+  ],
+  "priceLines":[
+    {"price":79500,"title":"A · prior swing High","color":"#52647d","lineStyle":2,"answerOnly":false},
+    {"price":75545.67,"title":"B · protected low candidate","color":"#5dd6c0","lineStyle":2,"answerOnly":true}
+  ],
+  "quiz":[
+    {"question":"A = 79.5k, B = 75.55k, C = 81.27k. C được gọi là gì so với A?","options":["LH","HH","LL"],"answer":1},
+    {"question":"Sau khi B tạo nền cho leg tăng phá A, B có vai trò gì?","options":["Protected low / HL quan trọng","Resistance","Không có ý nghĩa"],"answer":0},
+    {"question":"Có nên đánh dấu mọi dao động nhỏ thành HH/HL/LH/LL?","options":["Có, càng nhiều càng chính xác","Không; phải chọn swing phù hợp cấp cấu trúc đang phân tích"],"answer":1}
+  ],
+  "concepts":[
+    {"number":"01","title":"HH + HL","text":"Chuỗi Higher High và Higher Low là dấu hiệu cơ bản của bullish structure, nhưng phải được đọc trên cùng cấp swing."},
+    {"number":"02","title":"LH + LL","text":"Chuỗi Lower High và Lower Low là dấu hiệu cơ bản của bearish structure."},
+    {"number":"03","title":"Protected swing","text":"Trong bullish structure, HL tạo nền cho HH mới thường là protected low quan trọng. Trong bearish structure, logic đảo ngược với protected high."},
+    {"number":"04","title":"Internal noise","text":"Cấu trúc nhỏ có thể bearish trong lúc cấu trúc major vẫn bullish. Luôn nói rõ bạn đang phân tích cấp nào."
+    }
+  ],
+  "chartHelp":"Tạm bỏ qua zigzag nhỏ. Tập trung vào A 79.5k → B 75.55k → C 81.27k và đọc major structure."
+}
