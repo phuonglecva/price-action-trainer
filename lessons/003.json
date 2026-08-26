@@ -1,0 +1,45 @@
+{
+  "id":"003",
+  "title":"Impulse và pullback",
+  "subtitle":"Trend không đi thẳng: học tách directional leg khỏi nhịp hồi ngay trên candlestick thật.",
+  "summary":"Impulse là leg giá đi quyết liệt theo một hướng; pullback là leg đi ngược lại hoặc chậm lại. Điều quan trọng là đọc cả chuỗi candle, không gắn nhãn chỉ từ một cây nến đỏ/xanh.",
+  "candlesFrom":"001",
+  "symbol":"BTCUSDT",
+  "interval":"4h",
+  "sourceNote":"BTCUSDT 4H thật từ Binance Spot. Bài này dùng cùng đoạn dữ liệu để đọc chuyển động theo leg thay vì từng candle riêng lẻ.",
+  "framework":[
+    "Xác định leg nào tạo displacement/range expansion rõ.",
+    "Quan sát pullback có overlap nhiều hơn và momentum yếu hơn không.",
+    "Đừng gọi reversal chỉ vì xuất hiện vài candle ngược màu.",
+    "So độ sâu pullback với swing/protected level của cấu trúc lớn hơn."
+  ],
+  "principle":{
+    "title":"Một leg quan trọng hơn một candle",
+    "paragraphs":[
+      "Impulse bullish vẫn có thể chứa candle đỏ. Pullback bearish vẫn có thể chứa candle xanh. Ta quan sát tổng quãng đường, tốc độ, overlap và khả năng tạo swing mới.",
+      "Trong đoạn chart này, BTC đi từ vùng 69k lên 79.5k, hồi về khoảng 75.5k rồi lại mở một leg tăng lên 81.27k. Đây là ví dụ tốt để tách leg khỏi màu candle."
+    ],
+    "callout":"Price Action thực chiến đọc chuỗi hành vi. Một candle ngược hướng chỉ là dữ liệu; một leg phá cấu trúc mới có trọng lượng lớn hơn."
+  },
+  "examples":[
+    {"id":"A","time":1787288400,"position":"aboveBar","shape":"arrowDown","color":"#5dd6c0","title":"Kết thúc impulse 1","prompt":"Leg từ đầu chart đến A có đặc điểm gì?","answer":"Giá đi từ khoảng 69k lên High 79.5k với nhiều candle range lớn và closes cao dần. Đây là bullish impulse rõ."},
+    {"id":"B","time":1787461200,"position":"belowBar","shape":"arrowUp","color":"#f3c969","title":"Pullback low","prompt":"Từ A xuống B có nhất thiết là bearish trend mới?","answer":"Chưa. Giá điều chỉnh từ 79.5k xuống 75.55k nhưng chưa có bằng chứng cấu trúc lớn chuyển bearish; đây có thể được đọc là pullback cho tới khi protected structure bị phá."},
+    {"id":"C","time":1787619600,"position":"aboveBar","shape":"arrowDown","color":"#7aa7ff","title":"Impulse 2 tạo High mới","prompt":"Điều gì làm leg B→C quan trọng?","answer":"Leg tăng sau pullback vượt High 79.5k và sau đó đóng cửa chấp nhận phía trên level đó, tạo High 81.27k. Đây là continuation có ý nghĩa cấu trúc."}
+  ],
+  "priceLines":[
+    {"price":79500,"title":"Previous High 79.5k","color":"#52647d","lineStyle":2,"answerOnly":false},
+    {"price":75545.67,"title":"Pullback Low 75.55k","color":"#52647d","lineStyle":2,"answerOnly":false}
+  ],
+  "quiz":[
+    {"question":"Một bullish impulse có thể chứa candle đỏ không?","options":["Không","Có; leg tổng thể mới là thứ cần đánh giá"],"answer":1},
+    {"question":"Điều nào thường phù hợp hơn với pullback?","options":["Overlap nhiều hơn, tiến triển kém mượt hơn","Luôn có body cực lớn","Luôn phá protected low"],"answer":0},
+    {"question":"Khi giá giảm từ 79.5k về 75.5k, ta nên kết luận bearish ngay chỉ vì giảm mạnh?","options":["Có","Không; phải đặt nhịp giảm trong market structure"],"answer":1}
+  ],
+  "concepts":[
+    {"number":"01","title":"Directional progress","text":"Impulse thường tạo tiến triển giá rõ theo một hướng thay vì chỉ rung lắc quanh cùng vùng."},
+    {"number":"02","title":"Overlap","text":"Pullback thường overlap nhiều hơn. Đây không phải luật tuyệt đối nhưng là dấu hiệu hữu ích để so strength của hai phe."},
+    {"number":"03","title":"Depth","text":"Pullback càng sâu về protected swing, continuation thesis càng cần được đánh giá cẩn thận hơn."},
+    {"number":"04","title":"Leg → structure","text":"Sau khi nhìn được impulse/pullback, bước tiếp theo là gắn chúng vào HH/HL/LH/LL để biết bên nào đang kiểm soát cấu trúc."}
+  ],
+  "chartHelp":"Nhìn toàn leg A→B→C, không đếm số nến xanh/đỏ. So progress, overlap và swing endpoints."
+}
