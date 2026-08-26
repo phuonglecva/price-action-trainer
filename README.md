@@ -1,38 +1,26 @@
 # Price Action Trainer
 
-Interactive candlestick-based Price Action lessons using real market OHLC data.
+Interactive candlestick-based Price Action lessons built with TradingView Lightweight Charts and real Binance OHLCV data.
 
-## Lesson 01 — Body, wick, close location
+## Course
 
-The first lesson deliberately avoids memorizing named candle patterns. It trains the learner to read each candle through:
+- Lesson 01 — Body, wick and close location
+- Lesson 02 — Candle strength
+- Lesson 03 — Impulse and pullback
+- Lesson 04 — Market structure: HH, HL, LH, LL
+- Lesson 05 — BOS, CHoCH and protected levels
+- Lesson 06 — Liquidity sweep and false breakout
 
-1. **Range** — size versus neighboring candles.
-2. **Body** — how much of the range was retained from open to close.
-3. **Upper/lower wick** — prices visited but not retained into the close.
-4. **Close location** — whether the candle closed near its high, middle, or low.
-5. **Context** — rejection alone is not a buy/sell signal.
+The app is a data-driven lesson engine: new lessons are added through JSON metadata while reusing real OHLC candlestick datasets.
 
-The lesson uses a fixed BTCUSDT 4H snapshot from Binance Spot and also includes a live-practice mode that requests recent BTCUSDT 4H klines from the Binance public API.
-
-## Stack
-
-- TradingView Lightweight Charts 5.2.1
-- Vanilla HTML/CSS/JavaScript
-- Binance public Spot kline API
-- GitHub Pages
-
-## Development
-
-Serve the repo with any static HTTP server. For example:
+## Run locally
 
 ```bash
-python -m http.server 8080
+python -m http.server 8000
 ```
 
-Then open `http://localhost:8080`.
+Then open `http://localhost:8000`.
 
-> Opening `index.html` directly with `file://` is not recommended because browsers may block the lesson JSON fetch.
+## GitHub Pages
 
-## Deployment
-
-`.github/workflows/deploy-pages.yml` deploys the static site from `main` to GitHub Pages.
+Deployment workflow: `.github/workflows/deploy-pages.yml`.
