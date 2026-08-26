@@ -12,8 +12,8 @@
   <header class="topbar">
     <div>
       <div class="eyebrow">PRICE ACTION TRAINER</div>
-      <h1>Đọc nến như một cuộc đấu giá</h1>
-      <p class="subtitle">Bài 1 · Body, wick và vị trí đóng cửa — học trên candlestick BTCUSDT 4H thật.</p>
+      <h1 id="pageTitle">Đọc nến như một cuộc đấu giá</h1>
+      <p id="pageSubtitle" class="subtitle">Học Price Action trực tiếp trên candlestick thật.</p>
     </div>
     <div class="topbar-actions">
       <button id="lessonModeBtn" class="btn btn-active" type="button">Bài học</button>
@@ -22,53 +22,36 @@
     </div>
   </header>
 
+  <div class="course-strip">
+    <button id="prevLessonBtn" class="btn" type="button">← Bài trước</button>
+    <nav id="lessonNav" class="lesson-nav" aria-label="Danh sách bài học"></nav>
+    <button id="nextLessonBtn" class="btn" type="button">Bài sau →</button>
+  </div>
+
   <main class="layout">
     <aside class="lesson-panel">
       <section class="card intro-card">
-        <span class="badge">BÀI 01</span>
-        <h2>Đừng học tên mẫu nến trước</h2>
-        <p>Trước khi gọi một cây nến là pin bar hay engulfing, hãy trả lời 4 câu:</p>
-        <ol class="framework-list">
-          <li><strong>Range:</strong> nến lớn hay nhỏ so với xung quanh?</li>
-          <li><strong>Body:</strong> bên nào kiểm soát phần lớn quãng đường?</li>
-          <li><strong>Wick:</strong> giá nào đã bị thị trường từ chối?</li>
-          <li><strong>Close:</strong> nến đóng gần High, giữa range hay gần Low?</li>
-        </ol>
+        <span id="lessonBadge" class="badge">BÀI 01</span>
+        <h2 id="lessonTitle">Đang tải…</h2>
+        <p id="lessonSummary"></p>
+        <ol id="frameworkList" class="framework-list"></ol>
       </section>
 
       <section class="card">
-        <h3>Wick thực sự nói gì?</h3>
-        <p><strong>Upper wick</strong> = giá từng đi cao hơn body nhưng không giữ được đến lúc đóng nến.</p>
-        <p><strong>Lower wick</strong> = giá từng đi thấp hơn body nhưng bị kéo ngược trở lại.</p>
-        <div class="callout">Wick chỉ là bằng chứng <em>rejection</em>. Nó không tự động tạo tín hiệu Buy/Sell nếu thiếu context.</div>
+        <h3 id="principleTitle">Nguyên tắc thực chiến</h3>
+        <div id="principleBody"></div>
+        <div id="principleCallout" class="callout"></div>
       </section>
 
       <section class="card" id="exampleCard">
-        <h3>Ba nến cần đọc trên chart</h3>
-        <div class="example-row"><span class="example-label">A</span><div><strong>Expansion bullish</strong><p>Body lớn, close sát High. Buyers giữ được phần lớn thành quả.</p></div></div>
-        <div class="example-row"><span class="example-label">B</span><div><strong>Upper-wick rejection</strong><p>Giá được đẩy lên nhưng đóng lại thấp hơn đáng kể. Không được suy ra “short” nếu chưa xét context.</p></div></div>
-        <div class="example-row"><span class="example-label">C</span><div><strong>Lower-wick rejection</strong><p>Giá bị bán xuống nhưng được kéo lên và close gần High của candle.</p></div></div>
-        <p id="answerHint" class="answer-hint hidden">Đáp án đang bật: marker trên chart cho biết đặc tính chính của từng nến.</p>
+        <h3>Điểm cần đọc trên chart</h3>
+        <div id="examplesList"></div>
+        <p id="answerHint" class="answer-hint hidden">Đáp án đang bật: marker và level trên chart đang hiển thị cách đọc đề xuất.</p>
       </section>
 
       <section class="card quiz-card">
         <h3>Kiểm tra nhanh</h3>
-        <div class="quiz-item" data-answer="1">
-          <p>1. Upper wick dài chứng minh chắc chắn giá sẽ giảm?</p>
-          <label><input type="radio" name="q1" value="0"> Đúng</label>
-          <label><input type="radio" name="q1" value="1"> Sai — cần context và close location</label>
-        </div>
-        <div class="quiz-item" data-answer="2">
-          <p>2. Một bullish candle có body lớn và close sát High thường cho biết gì?</p>
-          <label><input type="radio" name="q2" value="0"> Sellers kiểm soát cuối phiên</label>
-          <label><input type="radio" name="q2" value="1"> Không có thông tin gì</label>
-          <label><input type="radio" name="q2" value="2"> Buyers kiểm soát phần lớn candle</label>
-        </div>
-        <div class="quiz-item" data-answer="0">
-          <p>3. Lower wick dài có ý nghĩa nhất khi nào?</p>
-          <label><input type="radio" name="q3" value="0"> Khi nó xuất hiện tại level/structure quan trọng và có phản ứng xác nhận</label>
-          <label><input type="radio" name="q3" value="1"> Bất cứ nơi nào trên chart</label>
-        </div>
+        <div id="quizList"></div>
         <button id="gradeBtn" class="btn btn-accent full" type="button">Chấm bài</button>
         <div id="quizResult" class="quiz-result" aria-live="polite"></div>
       </section>
@@ -79,7 +62,7 @@
         <div class="chart-toolbar">
           <div>
             <div id="chartTitle" class="chart-title">BTCUSDT · 4H</div>
-            <div id="chartSource" class="chart-source">Dữ liệu bài học cố định từ Binance Spot</div>
+            <div id="chartSource" class="chart-source">Đang tải dữ liệu bài học…</div>
           </div>
           <div class="legend-inline"><span class="dot up"></span> Bullish <span class="dot down"></span> Bearish</div>
         </div>
@@ -95,37 +78,16 @@
           <div><span>Close loc.</span><strong id="statCloseLoc">—</strong></div>
         </div>
 
-        <div id="chart" role="img" aria-label="Candlestick chart BTCUSDT 4H"></div>
-        <div class="chart-help">Rê chuột lên từng candle để đọc OHLC, body, wick và vị trí close. Scroll để zoom; kéo để di chuyển chart.</div>
+        <div id="chart" role="img" aria-label="Candlestick chart Price Action"></div>
+        <div id="chartHelp" class="chart-help">Rê chuột lên từng candle để đọc OHLC. Scroll để zoom; kéo để di chuyển chart.</div>
       </div>
 
-      <div class="concept-grid">
-        <article class="concept-card">
-          <span class="concept-number">01</span>
-          <h3>Body = kết quả Open → Close</h3>
-          <p>Body càng lớn so với toàn range, một phía càng kiểm soát phần lớn candle. Nhưng vẫn phải so với các candle lân cận.</p>
-        </article>
-        <article class="concept-card">
-          <span class="concept-number">02</span>
-          <h3>Wick = nơi giá không được giữ</h3>
-          <p>Upper wick cho thấy mức giá cao hơn bị từ chối; lower wick cho thấy mức giá thấp hơn bị từ chối. “Bị từ chối” không đồng nghĩa “đảo chiều”.</p>
-        </article>
-        <article class="concept-card">
-          <span class="concept-number">03</span>
-          <h3>Close location = ai giữ lợi thế cuối candle</h3>
-          <p>Close gần High thường nghiêng về buyers; close gần Low thường nghiêng về sellers. Close ở giữa cho thấy kết quả cân bằng hơn.</p>
-        </article>
-        <article class="concept-card">
-          <span class="concept-number">04</span>
-          <h3>Context luôn lớn hơn pattern</h3>
-          <p>Cùng một wick nhưng ở giữa range và tại previous low là hai câu chuyện khác nhau. Bài sau sẽ ghép candle vào swing và market structure.</p>
-        </article>
-      </div>
+      <div id="conceptGrid" class="concept-grid"></div>
     </section>
   </main>
 
   <footer>
-    <span>Price Action Trainer · Lesson 01</span>
+    <span id="footerLesson">Price Action Trainer</span>
     <span>Chart engine: TradingView Lightweight Charts™ · Market data: Binance Spot</span>
   </footer>
 
