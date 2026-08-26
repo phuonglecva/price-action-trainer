@@ -1,0 +1,11 @@
+{
+  "defaultLesson": "001",
+  "lessons": [
+    {"id":"001","file":"001.json","title":"Body, wick và vị trí đóng cửa"},
+    {"id":"002","file":"002.json","title":"Đọc sức mạnh của candle"},
+    {"id":"003","file":"003.json","title":"Impulse và pullback"},
+    {"id":"004","file":"004.json","title":"Market structure: HH, HL, LH, LL"},
+    {"id":"005","file":"005.json","title":"BOS, CHoCH và protected level"},
+    {"id":"006","file":"006.json","title":"Liquidity sweep và false breakout"}
+  ]
+}
