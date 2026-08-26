@@ -33,9 +33,16 @@
     <aside class="lesson-panel">
       <section class="card intro-card">
         <span id="lessonBadge" class="badge">BÀI 01</span>
+        <div id="lessonMeta" class="lesson-meta"></div>
         <h2 id="lessonTitle">Đang tải…</h2>
         <p id="lessonSummary"></p>
         <ol id="frameworkList" class="framework-list"></ol>
+      </section>
+
+      <section id="qualityCard" class="card hidden">
+        <h3>Mục tiêu học</h3>
+        <ul id="objectivesList" class="lesson-list"></ul>
+        <div class="prereq-block"><strong>Prerequisites</strong><div id="prerequisitesList" class="prerequisites-list"></div></div>
       </section>
 
       <section class="card">
@@ -50,11 +57,25 @@
         <p id="answerHint" class="answer-hint hidden">Đáp án đang bật: marker và level trên chart đang hiển thị cách đọc đề xuất.</p>
       </section>
 
+      <section id="practiceCard" class="card quality-detail-card hidden">
+        <h3>Common mistakes</h3>
+        <ul id="mistakesList" class="lesson-list"></ul>
+        <h3>Practice drill</h3>
+        <ol id="practiceList" class="lesson-list practice-list"></ol>
+        <div class="checkpoint-callout"><strong>Checkpoint</strong><p id="checkpointText"></p></div>
+      </section>
+
       <section class="card quiz-card">
         <h3>Kiểm tra nhanh</h3>
         <div id="quizList"></div>
         <button id="gradeBtn" class="btn btn-accent full" type="button">Chấm bài</button>
         <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+      </section>
+
+      <section id="referencesCard" class="card hidden">
+        <h3>Từ sách uy tín</h3>
+        <p class="reference-intro">Các ý dưới đây là hướng đọc và diễn giải lại; không sao chép dài nguyên văn từ sách.</p>
+        <div id="referencesList" class="references-list"></div>
       </section>
     </aside>
 
