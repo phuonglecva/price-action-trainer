@@ -1,0 +1,41 @@
+{
+  "id":"002",
+  "title":"Đọc sức mạnh của candle",
+  "subtitle":"Không chỉ nhìn nến xanh/đỏ: so range, body, wick và nơi candle đóng cửa.",
+  "summary":"Một candle mạnh không phải vì nó xanh hay đỏ. Ta đánh giá nó tương đối với các candle lân cận: range có mở rộng không, body chiếm bao nhiêu phần range, wick nằm ở đâu và close có giữ được lợi thế hay không.",
+  "candlesFrom":"001",
+  "symbol":"BTCUSDT",
+  "interval":"4h",
+  "sourceNote":"Snapshot BTCUSDT 4H thật từ Binance Spot; cùng đoạn dữ liệu để bạn thấy cách kiến thức mới thay đổi cách đọc chart.",
+  "framework":[
+    "So range hiện tại với 5–10 candle trước: expansion hay contraction?",
+    "Body lớn hay nhỏ so với toàn range?",
+    "Close nằm gần High, Low hay giữa range?",
+    "Wick có phủ nhận chuyển động của body hay chỉ là nhiễu nhỏ?"
+  ],
+  "principle":{
+    "title":"Strength là khái niệm tương đối",
+    "paragraphs":[
+      "Một body 1,000 USD có thể rất lớn trong giai đoạn yên ắng nhưng bình thường trong giai đoạn biến động mạnh.",
+      "Candle mạnh nhất thường kết hợp range mở rộng + body lớn + close gần cực trị. Candle có body nhỏ và hai wick lớn thường cho thấy kết quả giằng co hơn."
+    ],
+    "callout":"Đừng hỏi “candle này bullish không?”. Hãy hỏi: nó mạnh đến đâu so với những candle ngay trước nó, và sức mạnh đó xuất hiện ở vị trí nào?"
+  },
+  "examples":[
+    {"id":"A","time":1787288400,"position":"aboveBar","shape":"arrowDown","color":"#5dd6c0","title":"Bullish expansion","prompt":"Đọc A bằng range + body + close.","answer":"A mở 75,026, đóng 79,258 và High 79,500. Body chiếm phần lớn range, close sát High: buyers kiểm soát rất mạnh trong candle này."},
+    {"id":"B","time":1787302800,"position":"belowBar","shape":"arrowUp","color":"#ef7a78","title":"Bearish response","prompt":"B có phủ nhận một phần sức mạnh của A không?","answer":"Có. B mở gần 79,258 và đóng 77,224, tạo bearish body lớn. Nhưng một candle phản công mạnh chưa đủ để kết luận toàn bộ trend đã đảo chiều."},
+    {"id":"C","time":1787576400,"position":"aboveBar","shape":"circle","color":"#f3c969","title":"Large range, tiny body","prompt":"C có range lớn nhưng body rất nhỏ. Điều đó nói gì?","answer":"Giá đi từ Low 77,852 lên High 80,000 nhưng đóng gần Open. Hai phía đều tạo chuyển động lớn nhưng không bên nào giữ được nhiều lợi thế cuối candle: kết quả giằng co/rejection mạnh."}
+  ],
+  "quiz":[
+    {"question":"Một candle xanh có body nhỏ và upper wick rất dài có nhất thiết là bullish mạnh?","options":["Có, vì Close > Open","Không; phải nhìn body/range, close và context"],"answer":1},
+    {"question":"Dấu hiệu nào phù hợp nhất với bullish expansion?","options":["Range nhỏ, body nhỏ","Range mở rộng, body lớn, close gần High","Upper/lower wick đều rất dài và close giữa range"],"answer":1},
+    {"question":"Vì sao phải so candle với các candle lân cận?","options":["Để đánh giá strength theo volatility/context hiện tại","Vì giá tuyệt đối của BTC không quan trọng","Chỉ để tìm màu nến phổ biến"],"answer":0}
+  ],
+  "concepts":[
+    {"number":"01","title":"Expansion","text":"Range mở rộng rõ so với gần đây thường cho thấy participation/urgency tăng. Hướng close quyết định bên nào giữ lợi thế."},
+    {"number":"02","title":"Contraction","text":"Nhiều candle nhỏ, overlap nhiều thường cho thấy thị trường đang nén hoặc cân bằng; đừng ép một directional thesis quá sớm."},
+    {"number":"03","title":"Strong close","text":"Bullish close gần High hoặc bearish close gần Low thường đáng tin hơn một candle cùng màu nhưng đóng giữa range."},
+    {"number":"04","title":"Follow-through","text":"Candle kế tiếp có tiếp tục được hướng đi hay lập tức phủ nhận? Follow-through giúp phân biệt strength thật với một cú spike đơn lẻ."}
+  ],
+  "chartHelp":"Rê chuột qua A/B/C và so Body %, Wick %, Close location. Đừng chỉ nhìn màu candle."
+}
